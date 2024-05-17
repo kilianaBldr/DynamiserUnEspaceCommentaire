@@ -20,8 +20,11 @@ if (firstName === '' || lastName === '' || message === '') {
 } else {
     //si tout les champs sont bien remplie alors aucun message d'erreur s'affiche
     errorMessage.style.display = 'none';
+    //Création du nouvel espace de commentaire
+    const newComment = document.createElement('div');
+    //ajout les champs remplie dans le nouvelle espace commentaire 
+    newComment.innerHTML = ${firstName} ${lastName} ${message};
+    //ajout du nouveau commentaire créer à la liste de commentaire
+    commentList.appendChild(newComment);
 } 
-
-}
-
-);
+});
